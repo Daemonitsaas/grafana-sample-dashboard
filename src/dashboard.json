@@ -61,7 +61,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1605463515295,
+  "iteration": 1605538708726,
   "links": [],
   "panels": [
     {
@@ -731,7 +731,7 @@
         {
           "hide": false,
           "queryType": "raw",
-          "rawQuery": "SELECT \n    url,\n    CREATE_TIME_SERIES(time, measure_value::double)\nFROM \"$__database\".\"$__table\"\nWHERE $__timeFilter AND measure_name = 'scoreTotal' AND device_type = '${device}'\nGROUP BY url",
+          "rawQuery": "SELECT \n    url, engine_name,\n    CREATE_TIME_SERIES(time, measure_value::double)\nFROM \"$__database\".\"$__table\"\nWHERE $__timeFilter AND measure_name = 'scoreTotal' AND device_type = '${device}'\nGROUP BY url, engine_name",
           "refId": "A"
         }
       ],
@@ -981,8 +981,8 @@
       {
         "current": {
           "selected": false,
-          "text": "Daemonit Stats Preprod",
-          "value": "Daemonit Stats Preprod"
+          "text": "Daemonit Stats",
+          "value": "Daemonit Stats"
         },
         "error": null,
         "hide": 0,
@@ -1086,5 +1086,5 @@
   "timezone": "",
   "title": "Daemonit Stats",
   "uid": "WAeNrq2Gk",
-  "version": 35
+  "version": 36
 }
